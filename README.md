@@ -5,8 +5,6 @@ _The repo contains the boilerplate for `REST`._
 ## Installation guide
 
 ```
-# clone repository
-$ git clone git@github.com:karandip-eplato/wineleven-mvp-backend.git
 
 # install dependencies
 $ npm i
