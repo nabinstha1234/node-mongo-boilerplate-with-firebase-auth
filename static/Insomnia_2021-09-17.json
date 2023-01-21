@@ -1,0 +1,525 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-09-17T09:32:48.620Z",
+  "__export_source": "insomnia.desktop.app:v2020.3.3",
+  "resources": [
+    {
+      "_id": "req_1d28a1fff4a94f9f9ff541ae527ba4d9",
+      "authentication": {
+        "disabled": false,
+        "token": "{% response 'body', 'req_5027e098799745a8991e8b86c0f6376c', 'b64::JC5kYXRhLnRva2Vu::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1615041577296,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1615041577296,
+      "method": "GET",
+      "modified": 1615043734565,
+      "name": "UsersList",
+      "parameters": [],
+      "parentId": "fld_8211b8e9bf3341668d5c40a983a93c4c",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/users",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_8211b8e9bf3341668d5c40a983a93c4c",
+      "created": 1615041571859,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1615041571859,
+      "modified": 1615041571859,
+      "name": "Users",
+      "parentId": "wrk_a084451f72d348efb1b0e8a748222acf",
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_a084451f72d348efb1b0e8a748222acf",
+      "created": 1615016956226,
+      "description": "",
+      "modified": 1631871139508,
+      "name": "Node Boilerplage - IW",
+      "parentId": null,
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_c0ca171050774602951fe1a1a4c783c1",
+      "authentication": {
+        "token": "{% response 'body', 'req_5027e098799745a8991e8b86c0f6376c', 'b64::JC5kYXRhLnRva2Vu::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1615042068872,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1615029273218.5,
+      "method": "GET",
+      "modified": 1631705926229,
+      "name": "User",
+      "parameters": [],
+      "parentId": "fld_8211b8e9bf3341668d5c40a983a93c4c",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/users/{% response 'body', 'req_1d28a1fff4a94f9f9ff541ae527ba4d9', 'b64::JC5kYXRhLnJlc3VsdHNbMF0uX2lk::46b', 'never', 60 %}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9426d511949d4c72b77b9de4cebe70aa",
+      "authentication": {
+        "disabled": false,
+        "token": "{% response 'body', 'req_5027e098799745a8991e8b86c0f6376c', 'b64::JC5kYXRhLnRva2Vu::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"firstName\": \"Update\",\n\t\"lastName\": \"User\"\n}"
+      },
+      "created": 1615042197660,
+      "description": "",
+      "headers": [
+        { "id": "pair_13d08ead879e48a99ae2b690a7061bd9", "name": "Content-Type", "value": "application/json" }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1615023121179.75,
+      "method": "PUT",
+      "modified": 1631706201717,
+      "name": "UserUpdate",
+      "parameters": [],
+      "parentId": "fld_8211b8e9bf3341668d5c40a983a93c4c",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/users/{% response 'body', 'req_1d28a1fff4a94f9f9ff541ae527ba4d9', 'b64::JC5kYXRhLnJlc3VsdHNbMF0uX2lk::46b', 'never', 60 %}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4a1816ed43f84d2b8478a0089dd3abfe",
+      "authentication": {
+        "disabled": false,
+        "token": "{% response 'body', 'req_5027e098799745a8991e8b86c0f6376c', 'b64::JC5kYXRhLnRva2Vu::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"password\": \"newpassword\",\n\t\"oldPassword\": \"password\"\n}"
+      },
+      "created": 1631770900230,
+      "description": "",
+      "headers": [
+        { "id": "pair_13d08ead879e48a99ae2b690a7061bd9", "name": "Content-Type", "value": "application/json" }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1615022352174.9062,
+      "method": "PUT",
+      "modified": 1631770998332,
+      "name": "ChangePassword",
+      "parameters": [],
+      "parentId": "fld_8211b8e9bf3341668d5c40a983a93c4c",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/users/change-password",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9510588f99f64ef293fd8923098bd8cc",
+      "authentication": {
+        "disabled": false,
+        "token": "{% response 'body', 'req_5027e098799745a8991e8b86c0f6376c', 'b64::JC5kYXRhLnRva2Vu::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"firstName\": \"First\",\n\t\"lastName\": \"Last\",\n\t\"email\": \"user2@yopmail.com\",\n\t\"password\": \"password\"\n}"
+      },
+      "created": 1631707182964,
+      "description": "",
+      "headers": [
+        { "id": "pair_13d08ead879e48a99ae2b690a7061bd9", "name": "Content-Type", "value": "application/json" }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1615021583170.0625,
+      "method": "POST",
+      "modified": 1631707519506,
+      "name": "UserCreate",
+      "parameters": [],
+      "parentId": "fld_8211b8e9bf3341668d5c40a983a93c4c",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/users",
+      "_type": "request"
+    },
+    {
+      "_id": "req_fa7137a4bb6e47449416215587960a2b",
+      "authentication": {
+        "token": "{% response 'body', 'req_5027e098799745a8991e8b86c0f6376c', 'b64::JC5kYXRhLnRva2Vu::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1615042351483,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1615020045160.375,
+      "method": "DELETE",
+      "modified": 1631707534046,
+      "name": "UserDelete",
+      "parameters": [],
+      "parentId": "fld_8211b8e9bf3341668d5c40a983a93c4c",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/users/{% response 'body', 'req_1d28a1fff4a94f9f9ff541ae527ba4d9', 'b64::JC5kYXRhLnJlc3VsdHNbMF0uX2lk::46b', 'never', 60 %}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7ea4005c269244a28e065b2453ea97a6",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"test1@yopmail.com\",\n\t\"password\": \"password\",\n\t\"firstName\": \"First Name\",\n\t\"lastName\": \"Last Name\"\n}"
+      },
+      "created": 1615016969141,
+      "description": "",
+      "headers": [
+        { "id": "pair_67546bf2fa8c4038b4bdfefd2f1efcf2", "name": "Content-Type", "value": "application/json" }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1615016969141,
+      "method": "POST",
+      "modified": 1631769918455,
+      "name": "Register",
+      "parameters": [],
+      "parentId": "fld_87faf958602149999cf8e80b6ccf3275",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/auth/register",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_87faf958602149999cf8e80b6ccf3275",
+      "created": 1615016964383,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1615016964383,
+      "modified": 1615016964383,
+      "name": "Auth",
+      "parentId": "wrk_a084451f72d348efb1b0e8a748222acf",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_5027e098799745a8991e8b86c0f6376c",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"{{ email }}\",\n\t\"password\": \"{{ password  }}\"\n}"
+      },
+      "created": 1615017280529,
+      "description": "",
+      "headers": [
+        { "id": "pair_67546bf2fa8c4038b4bdfefd2f1efcf2", "name": "Content-Type", "value": "application/json" }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1612295094490.5,
+      "method": "POST",
+      "modified": 1631771173298,
+      "name": "Login",
+      "parameters": [],
+      "parentId": "fld_87faf958602149999cf8e80b6ccf3275",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/auth/login",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3ce4bab5a3084fcfb80409d9cd0ce848",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHlvcG1haWwuY29tIiwiaWF0IjoxNjMxNzY5OTM1LCJleHAiOjE2MzE4NTYzMzV9.WNnZfPL6ciKoi0EP8qcZJIUnmwzslTAh9L1SW_GUQ7A\"\n}"
+      },
+      "created": 1615017507639,
+      "description": "",
+      "headers": [
+        { "id": "pair_67546bf2fa8c4038b4bdfefd2f1efcf2", "name": "Content-Type", "value": "application/json" }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1610934157165.25,
+      "method": "POST",
+      "modified": 1631769947276,
+      "name": "VerifyEmail",
+      "parameters": [],
+      "parentId": "fld_87faf958602149999cf8e80b6ccf3275",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/auth/verify-email",
+      "_type": "request"
+    },
+    {
+      "_id": "req_cf8b30837308447abbd8485b65aa988a",
+      "authentication": {},
+      "body": { "mimeType": "application/json", "text": "{\n\t\"email\": \"test1@yopmail.com\"\n}" },
+      "created": 1615017524368,
+      "description": "",
+      "headers": [
+        { "id": "pair_67546bf2fa8c4038b4bdfefd2f1efcf2", "name": "Content-Type", "value": "application/json" }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1610253688502.625,
+      "method": "POST",
+      "modified": 1615017911540,
+      "name": "ForgotPassword",
+      "parameters": [],
+      "parentId": "fld_87faf958602149999cf8e80b6ccf3275",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/auth/forgot-password",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a0022a4db38d4318b2783d7446e8100d",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxNGJiODhhMC0xZDI3LTRjMGYtOTZhMC02ZmM4NmM5MDJkZjAiLCJpYXQiOjE2MzE3Njk5NjgsImV4cCI6MTYzMTc3MzU2OH0.I2_WC7aH3SXgPx07WBjqtBP7K-jG9C3Gcol3cAM0QPo\",\n\t\"password\": \"newpassword\"\n}"
+      },
+      "created": 1615017532486,
+      "description": "",
+      "headers": [
+        { "id": "pair_67546bf2fa8c4038b4bdfefd2f1efcf2", "name": "Content-Type", "value": "application/json" }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1609913454171.3125,
+      "method": "POST",
+      "modified": 1631769989522,
+      "name": "ResetPassword",
+      "parameters": [],
+      "parentId": "fld_87faf958602149999cf8e80b6ccf3275",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/auth/reset-password",
+      "_type": "request"
+    },
+    {
+      "_id": "req_46cda27e025145b8880e64a3ccdc4efb",
+      "authentication": {},
+      "body": { "mimeType": "application/json", "text": "{\n\t\"email\": \"test1@yopmail.com\"\n}" },
+      "created": 1615017559617,
+      "description": "",
+      "headers": [
+        { "id": "pair_67546bf2fa8c4038b4bdfefd2f1efcf2", "name": "Content-Type", "value": "application/json" }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1609743337005.6562,
+      "method": "POST",
+      "modified": 1631770098531,
+      "name": "ResendEmailVerification",
+      "parameters": [],
+      "parentId": "fld_87faf958602149999cf8e80b6ccf3275",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/auth/resend-email-verification",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c83bd89a493043bd8e870fb7e5331c2f",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"refreshToken\": \"{% response 'body', 'req_5027e098799745a8991e8b86c0f6376c', 'b64::JC5kYXRhLnJlZnJlc2hUb2tlbg==::46b', 'never' %}\"\n}"
+      },
+      "created": 1615017563686,
+      "description": "",
+      "headers": [
+        { "id": "pair_67546bf2fa8c4038b4bdfefd2f1efcf2", "name": "Content-Type", "value": "application/json" }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1609658278422.8281,
+      "method": "POST",
+      "modified": 1615019348081,
+      "name": "Logout",
+      "parameters": [],
+      "parentId": "fld_87faf958602149999cf8e80b6ccf3275",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/auth/logout",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e1559ca7c7384b7abcef7f2fa0c5c50a",
+      "authentication": {
+        "token": "{% response 'body', 'req_5027e098799745a8991e8b86c0f6376c', 'b64::JC5kYXRhLnRva2Vu::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1631770281109,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1609615749156.414,
+      "method": "GET",
+      "modified": 1631770303522,
+      "name": "LoggedInUser",
+      "parameters": [],
+      "parentId": "fld_87faf958602149999cf8e80b6ccf3275",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseUrl  }}:{{ port  }}/{{ version  }}/auth/me",
+      "_type": "request"
+    },
+    {
+      "_id": "env_085a07255e131d041920140b5aed74c463a7132d",
+      "color": null,
+      "created": 1615016956824,
+      "data": { "baseUrl": "http://localhost", "port": "8080" },
+      "dataPropertyOrder": { "&": ["baseUrl", "port"] },
+      "isPrivate": false,
+      "metaSortKey": 1615016956824,
+      "modified": 1615017007068,
+      "name": "Base Environment",
+      "parentId": "wrk_a084451f72d348efb1b0e8a748222acf",
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_085a07255e131d041920140b5aed74c463a7132d",
+      "cookies": [
+        {
+          "creation": "2021-06-27T15:15:12.353Z",
+          "domain": "http://localhost:8080",
+          "id": "23312881353479198",
+          "key": "refreshToken",
+          "path": "/",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQzMzc1NjM3OTgwZDQ3MjY5ZTMzNDAiLCJyb2xlIjoidXNlciIsImlhdCI6MTYxNTAxNzk0MywiZXhwIjoxNjE1NjIyNzQzfQ.7Y7p9Jr7-Y8Z4He5exkPt-14s_kFLSas38lJl73zvIY"
+        },
+        {
+          "creation": "2021-06-27T15:15:12.358Z",
+          "domain": "localhost",
+          "expires": "2021-09-23T05:46:14.000Z",
+          "hostOnly": true,
+          "httpOnly": true,
+          "id": "7092045990169791",
+          "key": "refreshToken",
+          "lastAccessed": "2021-09-16T05:46:14.434Z",
+          "maxAge": 604800,
+          "path": "/",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJlYjFkNThiYS1jNDU5LTQ1ODItYjZlNC03YjQyNTJjZWQ2ZWIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MzE3NzExNzQsImV4cCI6MTYzMjM3NTk3NH0.EWG08qKRV59uHXmymwO94TZIBXTi0HJePCo62AZ3ThI"
+        }
+      ],
+      "created": 1615016956839,
+      "modified": 1631771174434,
+      "name": "Default Jar",
+      "parentId": "wrk_a084451f72d348efb1b0e8a748222acf",
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_b3c8b7162ba845b89faf71ce9cb0fbd1",
+      "contentType": "yaml",
+      "contents": "",
+      "created": 1631704908658,
+      "fileName": "Wineleven",
+      "modified": 1631704908658,
+      "parentId": "wrk_a084451f72d348efb1b0e8a748222acf",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_d9e39627f8224dfb8e9c596fb3c01662",
+      "color": "#359c78",
+      "created": 1615017013456,
+      "data": {
+        "baseUrl": "http://localhost",
+        "email": "admin@api.com",
+        "password": "password",
+        "port": "8080",
+        "version": "v1"
+      },
+      "dataPropertyOrder": { "&": ["baseUrl", "port", "version", "email", "password"] },
+      "isPrivate": false,
+      "metaSortKey": 1615017013456,
+      "modified": 1615122996868,
+      "name": "Local(Admin)",
+      "parentId": "env_085a07255e131d041920140b5aed74c463a7132d",
+      "_type": "environment"
+    },
+    {
+      "_id": "env_1ee71b8020d74ef3b766cfd57e636455",
+      "color": "#359c78",
+      "created": 1615122998844,
+      "data": {
+        "baseUrl": "http://localhost",
+        "email": "user@api.com",
+        "password": "password",
+        "port": "8080",
+        "version": "v1"
+      },
+      "dataPropertyOrder": { "&": ["baseUrl", "port", "version", "email", "password"] },
+      "isPrivate": false,
+      "metaSortKey": 1615017013506,
+      "modified": 1615123008700,
+      "name": "Local(User)",
+      "parentId": "env_085a07255e131d041920140b5aed74c463a7132d",
+      "_type": "environment"
+    }
+  ]
+}
